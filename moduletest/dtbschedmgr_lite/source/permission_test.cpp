@@ -39,8 +39,6 @@ const char FOUNDATION_APPID[] = "foundation_signature";
 const char PREFIX[] = "uid_";
 const char SUFFIX[] = "_appid";
 const char LAUNCHER_BUNDLE_NAME[] = "com.test.launcher";
-const char LAUNCHER_APPID[] = "com.test.launcher_BM70W1/aVSbkx+uI/WT/mO9NqmtEBx9esLAogYAid75/gTMpKWqrNUT5hS9Cj"
-                              "Bq6kt1OcxgZzdCJ4HuVyS4dP8w=";
 #endif
 }
 

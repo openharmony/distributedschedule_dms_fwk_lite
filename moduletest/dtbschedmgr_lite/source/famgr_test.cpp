@@ -119,7 +119,6 @@ HWTEST_F(FamgrTest, StartRemoteAbility_002, TestSize.Level1) {
     }
     StartRemoteAbility(&want, nullptr, nullptr);
     auto onTlvParseDone = [] (int8_t errCode, const void *dmsMsg) {
-        const TlvNode *tlvHead = reinterpret_cast<const TlvNode *>(dmsMsg);
         EXPECT_NE(errCode, DMS_TLV_SUCCESS);
     };
     RunTest((const uint8_t *)GetPacketBufPtr(), GetPacketSize(), onTlvParseDone, nullptr);

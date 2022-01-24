@@ -212,10 +212,6 @@ static uint64_t ConvertIntLittle2Big(const uint8_t *dataIn, uint8_t typeSize)
 
 static bool MarshallInt(uint64_t field, FieldType fieldType, uint8_t fieldSize)
 {
-    if (g_buffer == NULL) {
-        return false;
-    }
-
     if (g_counter + (TYPE_FILED_LENGTH + MAX_BYTE_NUM + fieldSize) > PACKET_DATA_SIZE) {
         HILOGE("MarshallInt field is too big to fit");
         return false;

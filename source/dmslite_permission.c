@@ -24,6 +24,7 @@
 #include "bundle_manager.h"
 #else
 #include "bundle_inner_interface.h"
+#include "bundle_manager.h"
 #endif
 #include "dmslite_log.h"
 #include "dmslite_utils.h"
