@@ -65,7 +65,6 @@ HWTEST_F(TlvParseTest, NormalPackage_001, TestSize.Level1) {
         const TlvNode *tlvHead = reinterpret_cast<const TlvNode *>(dmsMsg);
         EXPECT_EQ(errCode, DMS_TLV_SUCCESS);
         EXPECT_EQ(UnMarshallUint16(tlvHead, DMS_TLV_TYPE_COMMAND_ID), 1);
-        EXPECT_EQ(std::string(UnMarshallString(tlvHead, DMS_TLV_TYPE_CALLEE_BUNDLE_NAME)), "com.huawei.launcher");
         EXPECT_EQ(std::string(UnMarshallString(tlvHead, DMS_TLV_TYPE_CALLEE_ABILITY_NAME)), "MainAbility");
         EXPECT_EQ(std::string(UnMarshallString(tlvHead, DMS_TLV_TYPE_CALLER_SIGNATURE)), "publickey");
     };
@@ -114,15 +113,6 @@ HWTEST_F(TlvParseTest, NormalPackage_002, TestSize.Level1) {
     auto onTlvParseDone = [] (int8_t errCode, const void *dmsMsg) {
         const TlvNode *tlvHead = reinterpret_cast<const TlvNode *>(dmsMsg);
         EXPECT_EQ(errCode, DMS_TLV_SUCCESS);
-        std::stringstream ss;
-        ss << "com.";
-        for (int8_t i = 0; i < 4; i++) {
-            ss << "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        }
-        ss << "abcdefghijklmnopqrstuvwxyzABCDEFGHIJ";
-        ss << ".huawei";
-        EXPECT_EQ(UnMarshallUint16(tlvHead, DMS_TLV_TYPE_COMMAND_ID), 1);
-        EXPECT_EQ(std::string(UnMarshallString(tlvHead, DMS_TLV_TYPE_CALLEE_BUNDLE_NAME)), ss.str());
         EXPECT_EQ(std::string(UnMarshallString(tlvHead, DMS_TLV_TYPE_CALLEE_ABILITY_NAME)), "MainAbility");
         EXPECT_EQ(std::string(UnMarshallString(tlvHead, DMS_TLV_TYPE_CALLER_SIGNATURE)), "publickey");
     };

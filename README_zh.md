@@ -104,7 +104,7 @@ import ohos.bundle.ElementName;
 
 // 构造want参数
 Want want = new Want();
-ElementName name = new ElementName(remote_device_id, "com.huawei.remote_bundle_name", "remote_ability_name"); 
+ElementName name = new ElementName(remote_device_id, "ohos.dms.remote_bundle_name", "remote_ability_name");
 want.setElement(name); // 将待启动的FA信息添加到Want中
 want.setFlags(Want.FLAG_ABILITYSLICE_MULTI_DEVICE); // 设置分布式标记，若不设置将无法使用分布式能力
 

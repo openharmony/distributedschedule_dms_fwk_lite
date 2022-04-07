@@ -31,7 +31,7 @@ extern "C" {
 
 /**
 * @brief Starts ability from remote
-* @param bundleName callee bundle name, e.g. com.huawei.helloworld
+* @param bundleName callee bundle name, e.g. ohos.distributedschedule.helloworld
 * @param abilityName callee ability name, e.g. MainAbility
 * @param onStartAbilityDone called when ability started done
 * @return DmsLiteCommonErrorCode

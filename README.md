@@ -104,7 +104,7 @@ import ohos.bundle.ElementName;
 
 // Create a Want instance that will be passed to the startAbility method.
 Want want = new Want();
-ElementName name = new ElementName(remote_device_id, "com.huawei.remote_bundle_name", "remote_ability_name"); 
+ElementName name = new ElementName(remote_device_id, "ohos.dms.remote_bundle_name", "remote_ability_name");
 want.setElement(name); // Add information about the target FA for startup to the Want instance.
 want.setFlags(Want.FLAG_ABILITYSLICE_MULTI_DEVICE); // Set the multi-device startup flag. If this flag is not set, remote FA startup will be unavailable.
 

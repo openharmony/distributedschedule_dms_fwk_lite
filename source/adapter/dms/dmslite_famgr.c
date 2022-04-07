@@ -128,7 +128,7 @@ static int32_t StartAbilityFromRemoteInner(const char *bundleName, const char *a
         if (!GetAmsInterface(&amsInterface)) {
             HILOGE("[GetAmsInterface query null]");
             ClearWant(&want);
-            return DMS_EC_GET_AMS_FAILURE;
+            return DMS_EC_GET_ABILITYMS_FAILURE;
         }
         errCode = amsInterface->StartAbility(&want);
     } else if (callerUid == SHELL_UID) {
@@ -140,10 +140,10 @@ static int32_t StartAbilityFromRemoteInner(const char *bundleName, const char *a
     ClearWant(&want);
 
     if (errCode != EC_SUCCESS) {
-        HILOGE("[Call ams StartAbility failed errCode = %d]", errCode);
+        HILOGE("[Call StartAbility failed errCode = %d]", errCode);
         return DMS_EC_START_ABILITY_SYNC_FAILURE;
     }
-    /* this just means we send to the ams a request of starting FA successfully */
+    /* this just means we send to the abilityms a request of starting FA successfully */
     return DMS_EC_START_ABILITY_SYNC_SUCCESS;
 }
 
@@ -156,7 +156,7 @@ int32_t StartAbilityFromRemote(const char *bundleName, const char *abilityName,
     }
 
     if (g_serviceIdentity.token == INVALID_IPC_TOKEN) {
-        /* register a callback for notification when ams starts ability successfully */
+        /* register a callback for notification when abilityms starts ability successfully */
         IpcCbMode mode = ONCE;
         if (RegisterIpcCallback(AmsResultCallback, mode, IPC_WAIT_FOREVER,
             &g_serviceIdentity, NULL) != EC_SUCCESS) {
