@@ -11,30 +11,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import("//build/lite/config/test.gni")
 import("//build/lite/config/subsystem/aafwk/path.gni")
+import("//build/lite/config/test.gni")
 
 if (ohos_kernel_type == "liteos_a" || ohos_kernel_type == "linux") {
   # feature: distributed_schedule_test_dms
   unittest("distributed_schedule_test_dms_door") {
     output_extension = "bin"
     sources = [
-      "source/famgr_test.cpp",
-      "source/permission_test.cpp",
-      "source/tlv_parse_test.cpp",
       "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_famgr.c",
+      "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_feature.c",
       "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_msg_handler.c",
       "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_packet.c",
       "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_parser.c",
       "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_permission.c",
       "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_session.c",
       "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_tlv_common.c",
-      "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_feature.c"
+      "source/famgr_test.cpp",
+      "source/permission_test.cpp",
+      "source/tlv_parse_test.cpp",
     ]
 
     defines = [
       "OHOS_APPEXECFWK_BMS_BUNDLEMANAGER",
-      "XTS_SUITE_TEST"
+      "XTS_SUITE_TEST",
     ]
 
     include_dirs = [
@@ -46,16 +46,15 @@ if (ohos_kernel_type == "liteos_a" || ohos_kernel_type == "linux") {
       "//foundation/communication/dsoftbus/interfaces/kits/common",
       "//foundation/communication/dsoftbus/interfaces/kits/transport",
       "//foundation/distributedschedule/dmsfwk_lite/include",
-      "//foundation/distributedschedule/dmsfwk_lite/interfaces/innerkits"
+      "//foundation/distributedschedule/dmsfwk_lite/interfaces/innerkits",
     ]
 
     deps = [
-      "//base/hiviewdfx/hilog_lite/frameworks/featured:hilog_shared",
-      "//foundation/communication/ipc_lite:liteipc_adapter",
-      "//foundation/distributedschedule/samgr_lite/samgr:samgr",
       "${aafwk_lite_path}/frameworks/abilitymgr_lite:aafwk_abilityManager_lite",
       "${appexecfwk_lite_path}/frameworks/bundle_lite:bundle",
-      "//foundation/communication/dsoftbus/sdk:softbus_client"
+      "//base/hiviewdfx/hilog_lite/frameworks/featured:hilog_shared",
+      "//foundation/communication/dsoftbus/sdk:softbus_client",
+      "//foundation/distributedschedule/samgr_lite/samgr:samgr",
     ]
 
     output_dir = "$root_out_dir/test/unittest/distributedschedule"
