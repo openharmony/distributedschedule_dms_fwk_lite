@@ -24,8 +24,8 @@
             "utils_base",
             "hilog",
             "samgr_lite",
-            "aafwk_lite",
             "bundle_framework_lite",
+            "ability_lite",
             "softbus_lite",
             "huks"
             ],
