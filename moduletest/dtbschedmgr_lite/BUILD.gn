@@ -19,14 +19,14 @@ if (ohos_kernel_type == "liteos_a" || ohos_kernel_type == "linux") {
   unittest("distributed_schedule_test_dms_door") {
     output_extension = "bin"
     sources = [
-      "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_famgr.c",
-      "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_feature.c",
-      "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_msg_handler.c",
-      "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_packet.c",
-      "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_parser.c",
-      "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_permission.c",
-      "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_session.c",
-      "//foundation/distributedschedule/dmsfwk_lite/source/dmslite_tlv_common.c",
+      "//foundation/ability/dmsfwk_lite/source/dmslite_famgr.c",
+      "//foundation/ability/dmsfwk_lite/source/dmslite_feature.c",
+      "//foundation/ability/dmsfwk_lite/source/dmslite_msg_handler.c",
+      "//foundation/ability/dmsfwk_lite/source/dmslite_packet.c",
+      "//foundation/ability/dmsfwk_lite/source/dmslite_parser.c",
+      "//foundation/ability/dmsfwk_lite/source/dmslite_permission.c",
+      "//foundation/ability/dmsfwk_lite/source/dmslite_session.c",
+      "//foundation/ability/dmsfwk_lite/source/dmslite_tlv_common.c",
       "source/famgr_test.cpp",
       "source/permission_test.cpp",
       "source/tlv_parse_test.cpp",
@@ -45,8 +45,8 @@ if (ohos_kernel_type == "liteos_a" || ohos_kernel_type == "linux") {
       "//foundation/communication/dsoftbus/interfaces/kits/bus_center",
       "//foundation/communication/dsoftbus/interfaces/kits/common",
       "//foundation/communication/dsoftbus/interfaces/kits/transport",
-      "//foundation/distributedschedule/dmsfwk_lite/include",
-      "//foundation/distributedschedule/dmsfwk_lite/interfaces/innerkits",
+      "//foundation/ability/dmsfwk_lite/include",
+      "//foundation/ability/dmsfwk_lite/interfaces/innerkits",
     ]
 
     deps = [
@@ -57,7 +57,7 @@ if (ohos_kernel_type == "liteos_a" || ohos_kernel_type == "linux") {
       "//foundation/distributedschedule/samgr_lite/samgr:samgr",
     ]
 
-    output_dir = "$root_out_dir/test/unittest/distributedschedule"
+    output_dir = "$root_out_dir/test/unittest/ability"
   }
   group("unittest") {
     deps = [ ":distributed_schedule_test_dms_door" ]

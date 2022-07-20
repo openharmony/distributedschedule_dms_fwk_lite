@@ -84,7 +84,7 @@
 分布式任务调度模块，其代码所在目录如下：
 
 ```
-foundation/distributedschedule/dmsfwk_lite
+foundation/ability/dmsfwk_lite
 ```
 
 在针对不同平台进行编译时，需要提前指定目标平台：

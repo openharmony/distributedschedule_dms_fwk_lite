@@ -84,7 +84,7 @@ The source code directory structure of the Distributed Scheduler is as follows:
 The code of the Distributed Scheduler is stored in the following directory:
 
 ```
-foundation/distributedschedule/dmsfwk_lite
+foundation/ability/dmsfwk_lite
 ```
 
 When compiling and building the code for a specific platform, you need to specify the target platform.

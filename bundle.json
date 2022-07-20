@@ -7,13 +7,13 @@
     "repository": "https://gitee.com/openharmony/distributedschedule_dms_fwk_lite",
     "publishAs": "code-segment",
     "segment": {
-        "destPath": "foundation/distributedschedule/dmsfwk_lite"
+        "destPath": "foundation/ability/dmsfwk_lite"
     },
     "dirs": {},
     "scripts": {},
     "component": {
         "name": "dmsfwk_lite",
-        "subsystem": "distributedschedule",
+        "subsystem": "ability",
         "adapted_system_type": [
             "small"
         ],
@@ -36,18 +36,18 @@
         },
         "build": {
             "sub_component": [
-                "//foundation/distributedschedule/dmsfwk_lite:dtbschedmgr",
-                "//foundation/distributedschedule/dmsfwk_lite/moduletest/dtbschedmgr_lite:distributed_schedule_test_dms_door"
+                "//foundation/ability/dmsfwk_lite:dtbschedmgr",
+                "//foundation/ability/dmsfwk_lite/moduletest/dtbschedmgr_lite:distributed_schedule_test_dms_door"
             ],
             "inner_kits": [
                 {
                     "header": {
-                        "header_base": "foundation/distributedschedule/dmsfwk_lite/interfaces/innerkits/",
+                        "header_base": "foundation/ability/dmsfwk_lite/interfaces/innerkits/",
                         "header_files": [
                             "dmsfwk_interface.h"
                         ]
                     },
-                    "name": "//foundation/distributedschedule/dmsfwk_lite:dtbschedmgr"
+                    "name": "//foundation/ability/dmsfwk_lite:dtbschedmgr"
                 }
             ]
         }
