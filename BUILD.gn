@@ -41,7 +41,7 @@ if (ohos_kernel_type == "liteos_a" || ohos_kernel_type == "linux") {
     include_dirs = [
       "include",
       "interfaces/innerkits",
-      "${aafwk_lite_path}/interfaces/innerkits/abilitymgr_lite",
+      "${aafwk_lite_path}/interfaces/inner_api/abilitymgr_lite",
       "${aafwk_lite_path}/interfaces/kits/ability_lite",
       "${aafwk_lite_path}/interfaces/kits/want_lite",
       "${appexecfwk_lite_path}/interfaces/kits/bundle_lite",
