@@ -1,10 +1,13 @@
-# 介绍<a name="ZH-CN_TOPIC_0000001128264105"></a>
+公告：
+因OpenHarmony部件设计规范化需求，2022.07月起distributedschedule_dms_fwk_lite仓库更名为ability_dmsfwk_lite，本仓库归档不在维护。
+请前往[**dmsfwk\_lite**](https://gitee.com/openharmony/ability_dmsfwk_lite)仓库，了解最新代码信息
+# 轻量级分布式组件管理部件<a name="ZH-CN_TOPIC_0000001128264105"></a>
 
 -   [简介](#section11660541593)
 -   [目录](#section1464106163817)
 -   [约束](#section1718733212019)
 -   [使用](#section10729231131110)
--   [涉及仓](#section176111311166)
+-   [相关仓](#section176111311166)
 
 ## 简介<a name="section11660541593"></a>
 
@@ -120,9 +123,9 @@ startAbility(want); // 按照Want启动指定FA，want参数命名以实际开�
 
 执行主设备侧的startAbility即可拉起从设备FA
 
-## 涉及仓<a name="section176111311166"></a>
+## 相关仓<a name="section176111311166"></a>
 
-**[分布式任务调度子系统](zh-cn_topic_0000001115719369.md)**
+轻量级分布式组件管理
 
-[dms\_fwk\_lite](https://gitee.com/openharmony/distributedschedule_dms_fwk_lite)
+[**dmsfwk\_lite**](https://gitee.com/openharmony/ability_dmsfwk_lite)
 
