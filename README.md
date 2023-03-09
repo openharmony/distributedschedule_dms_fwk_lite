@@ -1,3 +1,9 @@
+**NOTICE**
+
+The distributedschedule_dms_fwk_lite repository is renamed ability_dmsfwk_lite since July 2022. The distributedschedule_dms_fwk_lite repository is archived and no longer maintained.
+
+To obtain the latest code, go to the [**dmsfwk\_lite**](https://gitee.com/openharmony/ability_dmsfwk_lite) repository.
+
 # dms\_fwk\_lite<a name="EN-US_TOPIC_0000001128264105"></a>
 
 -   [Introduction](#section11660541593)
@@ -49,7 +55,7 @@ The source code directory structure of the Distributed Scheduler is as follows:
 │  ├── dmslite_inner_common.h                # Internal common file for the Distributed Scheduler
 │  ├── dmslite.h                             # Header file for the implementation of the Distributed Scheduler Service (also called the Distributed Manager Service)
 │  ├── dmslite_log.h                         # Header file for the log module
-│  ├── dmslite_msg_parser.h                  # Header file for the distributed message parsing module
+│  ├── dmslite_parser.h                  # Header file for the distributed message parsing module
 │  ├── dmslite_tlv_common.h                  # Header file for the TLV data parsing module
 │  └── dmslite_session.h                     # Header file for the inter-device communication module
 ├── README.md
@@ -122,7 +128,7 @@ Call the  **startAbility**  method on the primary device to start the target FA 
 
 ## Repositories Involved<a name="section176111311166"></a>
 
-[Distributed Scheduler subsystem](en-us_topic_0000001115719369.md)
+[Distributed Scheduler subsystem]
 
-**[dms\_fwk\_lite](https://gitee.com/openharmony/distributedschedule_dms_fwk_lite)**
+[**dmsfwk\_lite**](https://gitee.com/openharmony/ability_dmsfwk_lite)
 
